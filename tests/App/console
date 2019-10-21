@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+namespace Wynd\CQRSBundle\Tests\App;
+
+require_once __DIR__ . '/../../vendor/autoload.php';
+
+use Symfony\Bundle\FrameworkBundle\Console\Application;
+
+$kernel = new MicroKernel('dev', true);
+$application = new Application($kernel);
+$application->run();

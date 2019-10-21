@@ -1,0 +1,7 @@
+vendor/
+tests/App/cache
+tests/App/logs
+composer.lock
+.php_cs.cache
+.phpunit.result.cache
+coverrage/

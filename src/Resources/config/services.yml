@@ -1,0 +1,23 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Nihilus\QueryBusInterface: '@Nihilus\QueryBus'
+    Nihilus\CommandBusInterface: '@Nihilus\CommandBus'
+    Nihilus\QueryHandlerResolverInterface: '@Wynd\CQRSBundle\Query\Resolver\ContainerQueryHandlerResolver'
+    Nihilus\CommandHandlerResolverInterface: '@Wynd\CQRSBundle\Command\Resolver\ContainerCommandHandlerResolver'
+    Nihilus\QueryPipelineResolverInterface: '@Wynd\CQRSBundle\Query\Resolver\ContainerQueryPipelineResolver'
+    Nihilus\CommandPipelineResolverInterface: '@Wynd\CQRSBundle\Command\Resolver\ContainerCommandPipelineResolver'
+
+    Nihilus\QueryBus: ~
+    Nihilus\CommandBus: ~
+    Wynd\CQRSBundle\Query\Resolver\ContainerQueryHandlerResolver: ~
+    Wynd\CQRSBundle\Command\Resolver\ContainerCommandHandlerResolver: ~
+    Wynd\CQRSBundle\Query\Resolver\ContainerQueryPipelineResolver:
+        arguments:
+            $pipelinesConfig: '%wynd.cqrs.query_pipelines_config%'
+    Wynd\CQRSBundle\Command\Resolver\ContainerCommandPipelineResolver:
+        arguments:
+            $pipelinesConfig: '%wynd.cqrs.command_pipelines_config%'

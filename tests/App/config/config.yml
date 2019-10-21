@@ -1,0 +1,12 @@
+imports:
+  - { resource: services.yml }
+
+framework:
+  secret: 'thissecret'
+
+wynd_cqrs:
+  pipelines:
+    query:
+      global: ['test1', 'test2']
+    command:
+      global: []
