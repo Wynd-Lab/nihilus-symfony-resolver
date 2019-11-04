@@ -96,4 +96,21 @@ class ContainerCommandHandlerResolverTest extends TestCase
 
         $this->assertSame($handler, $this->resolver->get($command));
     }
+
+    public function testGetAll()
+    {
+        $this->assertEquals([], $this->resolver->getAll($this->createMock(CommandInterface::class)));
+    }
+
+    public function testGetServiceIdWhenFound()
+    {
+        $this->resolver->addHandler('queryName', 'serviceId');
+
+        $this->assertEquals('serviceId', $this->resolver->getServiceId('queryName'));
+    }
+
+    public function testGetServiceIdWhenNotFound()
+    {
+        $this->assertNull($this->resolver->getServiceId('unknow'));
+    }
 }

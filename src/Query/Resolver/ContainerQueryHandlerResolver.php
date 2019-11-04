@@ -24,9 +24,14 @@ class ContainerQueryHandlerResolver implements QueryHandlerResolverInterface
         $this->container = $container;
     }
 
-    public function addHandler(string $query, string $serviceName)
+    public function addHandler(string $query, string $serviceName): void
     {
         $this->queryHandlerMapping[$query] = $serviceName;
+    }
+
+    public function getServiceId(string $query): ?string
+    {
+        return $this->queryHandlerMapping[$query] ?? null;
     }
 
     public function get(QueryInterface $query): ?QueryHandlerInterface

@@ -96,4 +96,11 @@ class ContainerQueryHandlerResolverTest extends TestCase
 
         $this->assertSame($handler, $this->resolver->get($query));
     }
+
+    public function testGetServiceId()
+    {
+        $this->resolver->addHandler('OneQuery', 'OneService');
+
+        $this->assertEquals('OneService', $this->resolver->getServiceId('OneQuery'));
+    }
 }

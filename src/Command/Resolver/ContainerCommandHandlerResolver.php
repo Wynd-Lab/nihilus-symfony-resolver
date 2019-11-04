@@ -24,7 +24,7 @@ class ContainerCommandHandlerResolver implements CommandHandlerResolverInterface
         $this->container = $container;
     }
 
-    public function addHandler(string $query, string $serviceName)
+    public function addHandler(string $query, string $serviceName): void
     {
         $this->handlerMapping[$query] = $serviceName;
     }
@@ -39,5 +39,20 @@ class ContainerCommandHandlerResolver implements CommandHandlerResolverInterface
         }
 
         return $this->container->get($this->handlerMapping[get_class($command)]);
+    }
+
+    public function getServiceId(string $query): ?string
+    {
+        return $this->handlerMapping[$query] ?? null;
+    }
+
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     * @param CommandInterface $command
+     * @return array
+     */
+    public function getAll(CommandInterface $command): array
+    {
+        return [];
     }
 }

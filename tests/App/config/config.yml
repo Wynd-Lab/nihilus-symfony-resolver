@@ -5,8 +5,12 @@ framework:
   secret: 'thissecret'
 
 wynd_cqrs:
-  pipelines:
-    query:
-      global: ['test1', 'test2']
-    command:
-      global: []
+  query:
+    middlewares:
+      global: ['test1']
+      transaction: ['@global', 'test2']
+    binding:
+      Wynd\CQRSBundle\Tests\App\CQRS\Query\TestQuery: ['@transaction', 'test3']
+  command:
+    middlewares: ~
+    binding: ~

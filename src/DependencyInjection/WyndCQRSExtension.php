@@ -2,7 +2,6 @@
 
 namespace Wynd\CQRSBundle\DependencyInjection;
 
-use CQRSBundle\CQRS\Query\Resolver\ContainerQueryPipelineResolver;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
@@ -25,7 +24,9 @@ class WyndCQRSExtension extends ConfigurableExtension
 
         $loader->load('services.yml');
 
-        $container->setParameter('wynd.cqrs.query_pipelines_config', $config['pipelines']['query']);
-        $container->setParameter('wynd.cqrs.command_pipelines_config', $config['pipelines']['command']);
+        $container->setParameter('wynd.cqrs.query_middlewares_config', $config['query']['middlewares']);
+        $container->setParameter('wynd.cqrs.command_middlewares_config', $config['command']['middlewares']);
+        $container->setParameter('wynd.cqrs.query_middlewares_binding', $config['query']['binding']);
+        $container->setParameter('wynd.cqrs.command_middlewares_binding', $config['command']['binding']);
     }
 }

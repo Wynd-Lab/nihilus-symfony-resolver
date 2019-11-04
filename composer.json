@@ -1,6 +1,7 @@
 {
   "name": "nihilus/cqrs-bundle",
   "license": "apache",
+  "description": "CQRS Bundle",
   "type": "symfony-bundle",
   "autoload": {
     "psr-4": {
@@ -18,7 +19,7 @@
     "symfony/http-kernel": "3.4.*",
     "symfony/framework-bundle": "3.4.*",
     "symfony/yaml": "3.4.*",
-    "wynd/nihilus": "dev-master"
+    "wynd/nihilus": "1.0.0-rc1"
   },
   "require-dev": {
     "phpunit/phpunit": "8.4.*",
@@ -30,9 +31,13 @@
   },
   "scripts": {
       "test": "vendor/bin/phpunit tests --bootstrap vendor/autoload.php",
-      "test:watch": "vendor/bin/phpunit-watcher watch tests/unit/",
+      "test:coverage": "vendor/bin/phpunit tests --bootstrap vendor/autoload.php --coverage-html=coverrage/",
+      "test:watch": [
+        "Composer\\Config::disableProcessTimeout",
+        "vendor/bin/phpunit-watcher watch tests/unit/"
+      ],
       "format": "vendor/bin/php-cs-fixer fix src",
-      "lint": "vendor/bin/phpmd src text codesize,cleancode,design,naming,controversial,unusedcode"
+      "lint": "vendor/bin/phpmd src text ./ruleset.xml"
   },
   "minimum-stability": "dev"
 }

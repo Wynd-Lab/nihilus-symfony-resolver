@@ -14,16 +14,20 @@ services:
 
   Wynd\CQRSBundle\Tests\App\CQRS\Query\Handler\TestQueryHandler:
     tags:
-      - { name: 'wynd.cqrs.query_handler', handle: 'Wynd\CQRSBundle\Tests\App\CQRS\Query\TestQuery' }
+      - { name: 'wynd.cqrs.query_handler', handle: 'Wynd\CQRSBundle\Tests\App\CQRS\Query\TestQuery', middleware: 'ezeaze' }
 
   Wynd\CQRSBundle\Tests\App\CQRS\Command\Handler\TestCommandHandler:
     tags:
       - { name: 'wynd.cqrs.command_handler', handle: 'Wynd\CQRSBundle\Tests\App\CQRS\Command\TestCommand' }
 
-  Wynd\CQRSBundle\Tests\App\CQRS\Query\Pipeline\Test1Pipeline:
+  Wynd\CQRSBundle\Tests\App\CQRS\Query\Middleware\Test1Middleware:
     tags:
-      - { name: 'wynd.cqrs.query_pipeline', identifier: 'test1' }
+      - { name: 'wynd.cqrs.query_middleware', identifier: 'test1' }
 
-  Wynd\CQRSBundle\Tests\App\CQRS\Query\Pipeline\Test2Pipeline:
+  Wynd\CQRSBundle\Tests\App\CQRS\Query\Middleware\Test2Middleware:
     tags:
-      - { name: 'wynd.cqrs.query_pipeline', identifier: 'test2' }
+      - { name: 'wynd.cqrs.query_middleware', identifier: 'test2' }
+
+  Wynd\CQRSBundle\Tests\App\CQRS\Query\Middleware\Test3Middleware:
+    tags:
+      - { name: 'wynd.cqrs.query_middleware', identifier: 'test3' }
