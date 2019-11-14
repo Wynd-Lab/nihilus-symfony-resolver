@@ -39,5 +39,6 @@
       "format": "vendor/bin/php-cs-fixer fix src",
       "lint": "vendor/bin/phpmd src text ./ruleset.xml"
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
