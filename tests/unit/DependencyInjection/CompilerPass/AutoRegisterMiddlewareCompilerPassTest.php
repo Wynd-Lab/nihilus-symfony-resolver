@@ -1,12 +1,12 @@
 <?php
 
-namespace Wynd\CQRSBundle\Tests\unit\DependencyInjection\CompilerPass;
+namespace Nihilus\CQRSBundle\Tests\unit\DependencyInjection\CompilerPass;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\Alias;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
-use Wynd\CQRSBundle\DependencyInjection\CompilerPass\AutoRegisterMiddlewareCompilerPass;
+use Nihilus\CQRSBundle\DependencyInjection\CompilerPass\AutoRegisterMiddlewareCompilerPass;
 
 class AutoRegisterMiddlewareCompilerPassTest extends TestCase
 {

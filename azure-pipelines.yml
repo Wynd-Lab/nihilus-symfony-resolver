@@ -31,6 +31,13 @@ steps:
 - script: composer test
   displayName: 'composer test'
 
+- script: |
+    echo "---> tests/App/console app:query"
+    tests/App/console app:query
+    echo "---> tests/App/console app:command"
+    tests/App/console app:command
+  displayName: 'integration test'
+
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'

@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Wynd\CQRSBundle\DependencyInjection\CompilerPass;
+namespace Nihilus\CQRSBundle\DependencyInjection\CompilerPass;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Wynd\CQRSBundle\Builder\MiddlewareChainBuilder;
+use Nihilus\CQRSBundle\Builder\MiddlewareChainBuilder;
 
 class AutoRegisterChainMiddlewareCompilerPass implements CompilerPassInterface
 {
@@ -45,11 +45,11 @@ class AutoRegisterChainMiddlewareCompilerPass implements CompilerPassInterface
     {
         $resolverDefinition = $container->findDefinition($this->resolverId);
 
-        $chains = $container->getParameter(sprintf('wynd.cqrs.%s_middlewares_config', $this->type));
+        $chains = $container->getParameter(sprintf('nihilus.cqrs.%s_middlewares_config', $this->type));
 
         $this->chainBuilder->setChains($chains);
 
-        $modelsBinding = $container->getParameter(sprintf('wynd.cqrs.%s_middlewares_binding', $this->type));
+        $modelsBinding = $container->getParameter(sprintf('nihilus.cqrs.%s_middlewares_binding', $this->type));
         foreach ($modelsBinding as $model => $config) {
             $this->chainBuilder->addChain($model, $config);
         }
@@ -65,7 +65,7 @@ class AutoRegisterChainMiddlewareCompilerPass implements CompilerPassInterface
             );
         }
 
-        $container->setParameter(sprintf('wynd.cqrs.models.%s', $this->type), $models);
+        $container->setParameter(sprintf('nihilus.cqrs.models.%s', $this->type), $models);
     }
 
     private function discoverModels(ContainerBuilder $container): array

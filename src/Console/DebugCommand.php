@@ -1,6 +1,6 @@
 <?php
 
-namespace Wynd\CQRSBundle\Console;
+namespace Nihilus\CQRSBundle\Console;
 
 use Nihilus\QueryHandlerResolverInterface;
 use Nihilus\QueryMiddlewareResolverInterface;
@@ -8,10 +8,10 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Wynd\CQRSBundle\Command\Resolver\ContainerCommandHandlerResolver;
-use Wynd\CQRSBundle\Command\Resolver\ContainerCommandMiddlewareResolver;
-use Wynd\CQRSBundle\Query\Resolver\ContainerQueryHandlerResolver;
-use Wynd\CQRSBundle\Query\Resolver\ContainerQueryMiddlewareResolver;
+use Nihilus\CQRSBundle\Command\Resolver\ContainerCommandHandlerResolver;
+use Nihilus\CQRSBundle\Command\Resolver\ContainerCommandMiddlewareResolver;
+use Nihilus\CQRSBundle\Query\Resolver\ContainerQueryHandlerResolver;
+use Nihilus\CQRSBundle\Query\Resolver\ContainerQueryMiddlewareResolver;
 
 class DebugCommand extends Command
 {

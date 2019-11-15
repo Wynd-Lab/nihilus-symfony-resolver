@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Wynd\CQRSBundle\Tests\unit\Query\Resolver;
+namespace Nihilus\CQRSBundle\Tests\unit\Query\Resolver;
 
 use Nihilus\QueryInterface;
 use Nihilus\QueryMiddlewareInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
-use Wynd\CQRSBundle\Query\Resolver\ContainerQueryMiddlewareResolver;
+use Nihilus\CQRSBundle\Query\Resolver\ContainerQueryMiddlewareResolver;
 
 class ContainerQueryMiddlewareResolverTest extends TestCase
 {

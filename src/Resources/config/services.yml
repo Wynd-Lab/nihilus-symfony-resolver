@@ -6,19 +6,19 @@ services:
 
     Nihilus\QueryBusInterface: '@Nihilus\QueryBus'
     Nihilus\CommandBusInterface: '@Nihilus\CommandBus'
-    Nihilus\QueryHandlerResolverInterface: '@Wynd\CQRSBundle\Query\Resolver\ContainerQueryHandlerResolver'
-    Nihilus\CommandHandlerResolverInterface: '@Wynd\CQRSBundle\Command\Resolver\ContainerCommandHandlerResolver'
-    Nihilus\QueryMiddlewareResolverInterface: '@Wynd\CQRSBundle\Query\Resolver\ContainerQueryMiddlewareResolver'
-    Nihilus\CommandMiddlewareResolverInterface: '@Wynd\CQRSBundle\Command\Resolver\ContainerCommandMiddlewareResolver'
+    Nihilus\QueryHandlerResolverInterface: '@Nihilus\CQRSBundle\Query\Resolver\ContainerQueryHandlerResolver'
+    Nihilus\CommandHandlerResolverInterface: '@Nihilus\CQRSBundle\Command\Resolver\ContainerCommandHandlerResolver'
+    Nihilus\QueryMiddlewareResolverInterface: '@Nihilus\CQRSBundle\Query\Resolver\ContainerQueryMiddlewareResolver'
+    Nihilus\CommandMiddlewareResolverInterface: '@Nihilus\CQRSBundle\Command\Resolver\ContainerCommandMiddlewareResolver'
 
     Nihilus\QueryBus: ~
     Nihilus\CommandBus: ~
-    Wynd\CQRSBundle\Query\Resolver\ContainerQueryHandlerResolver: ~
-    Wynd\CQRSBundle\Command\Resolver\ContainerCommandHandlerResolver: ~
-    Wynd\CQRSBundle\Query\Resolver\ContainerQueryMiddlewareResolver: ~
-    Wynd\CQRSBundle\Command\Resolver\ContainerCommandMiddlewareResolver: ~
+    Nihilus\CQRSBundle\Query\Resolver\ContainerQueryHandlerResolver: ~
+    Nihilus\CQRSBundle\Command\Resolver\ContainerCommandHandlerResolver: ~
+    Nihilus\CQRSBundle\Query\Resolver\ContainerQueryMiddlewareResolver: ~
+    Nihilus\CQRSBundle\Command\Resolver\ContainerCommandMiddlewareResolver: ~
 
-    Wynd\CQRSBundle\Console\DebugCommand:
+    Nihilus\CQRSBundle\Console\DebugCommand:
         arguments:
-            $queryNames: '%wynd.cqrs.models.query%'
-            $commandNames: '%wynd.cqrs.models.command%'
+            $queryNames: '%nihilus.cqrs.models.query%'
+            $commandNames: '%nihilus.cqrs.models.command%'

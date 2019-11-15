@@ -1,6 +1,6 @@
 <?php
 
-namespace Wynd\CQRSBundle\Query\Resolver;
+namespace Nihilus\CQRSBundle\Query\Resolver;
 
 use Nihilus\QueryInterface;
 use Nihilus\QueryMiddlewareResolverInterface;

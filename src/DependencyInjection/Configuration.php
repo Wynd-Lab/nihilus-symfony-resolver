@@ -1,13 +1,13 @@
 <?php
 
-namespace Wynd\CQRSBundle\DependencyInjection;
+namespace Nihilus\CQRSBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 /**
  * Class Configuration
- * @package Wynd\CQRSBundle\DependencyInjection
+ * @package Nihilus\CQRSBundle\DependencyInjection
  *œœ
  * @codeCoverageIgnore
  */
@@ -17,7 +17,7 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder();
 
-        $rootNode = $treeBuilder->root('wynd_cqrs');
+        $rootNode = $treeBuilder->root('nihilus_cqrs');
 
         $rootNode
             ->children()

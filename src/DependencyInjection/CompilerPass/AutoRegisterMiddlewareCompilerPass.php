@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Wynd\CQRSBundle\DependencyInjection\CompilerPass;
+namespace Nihilus\CQRSBundle\DependencyInjection\CompilerPass;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

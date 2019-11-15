@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Wynd\CQRSBundle\Tests\Builder;
+namespace Nihilus\CQRSBundle\Tests\Builder;
 
 
 use PHPUnit\Framework\TestCase;
-use Wynd\CQRSBundle\Builder\MiddlewareChainBuilder;
+use Nihilus\CQRSBundle\Builder\MiddlewareChainBuilder;
 
 class MiddlewareChainBuilderTest extends TestCase
 {
