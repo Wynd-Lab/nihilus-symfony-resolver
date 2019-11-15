@@ -4,7 +4,7 @@
 [![Azure Pipelines](https://img.shields.io/azure-devops/build/pontoreausylvain/6b6d6e3f-41ee-4d74-8e70-60b5b23e865e/2)](https://dev.azure.com/pontoreausylvain/Nihilus/_build?definitionId=2)
 ![Azure DevOps tests](https://img.shields.io/azure-devops/tests/pontoreausylvain/nihilus/2)
 
-NihilusBundle is a CQRS Bundle built by [Wynd](https://www.wynd.eu) and used by our backend projects.
+Nihilus resolver provider as a Symfony Bundle. Built by [Wynd](https://www.wynd.eu) and used by our backend projects.
 
 ## Quick start
 
