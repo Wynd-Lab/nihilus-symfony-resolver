@@ -1,6 +1,6 @@
 <?php
 
-namespace Wynd\CQRSBundle\Command\Resolver;
+namespace Nihilus\CQRSBundle\Command\Resolver;
 
 use Nihilus\CommandHandlerInterface;
 use Nihilus\CommandHandlerResolverInterface;

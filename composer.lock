@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c008848353d42fdbe67242b30890686",
+    "content-hash": "8ef693cd53e7c0daffabf6ab2472c3b1",
     "packages": [
         {
             "name": "psr/cache",
@@ -1676,22 +1676,22 @@
         },
         {
             "name": "wynd/nihilus",
-            "version": "1.0.0-rc1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Wynd-Lab/nihilus.git",
-                "reference": "579f1ca7ba0aa97e85a6b86feb9e081f42af9fa4"
+                "reference": "ec83a796928cb70cceacc75efd0438372de7eaed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Wynd-Lab/nihilus/zipball/579f1ca7ba0aa97e85a6b86feb9e081f42af9fa4",
-                "reference": "579f1ca7ba0aa97e85a6b86feb9e081f42af9fa4",
+                "url": "https://api.github.com/repos/Wynd-Lab/nihilus/zipball/ec83a796928cb70cceacc75efd0438372de7eaed",
+                "reference": "ec83a796928cb70cceacc75efd0438372de7eaed",
                 "shasum": ""
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.15",
                 "phpmd/phpmd": "^2.7",
-                "phpunit/phpunit": "^7.5",
+                "phpunit/phpunit": "^8.4",
                 "spatie/phpunit-watcher": "^1.10"
             },
             "type": "library",
@@ -1714,7 +1714,7 @@
             ],
             "description": "CQRS component with 0 dependencies. Built by Wynd with PHP and ️❤️!",
             "homepage": "https://github.com/Wynd-Lab/nihilus",
-            "time": "2019-10-28T14:02:57+00:00"
+            "time": "2019-11-12T14:46:06+00:00"
         }
     ],
     "packages-dev": [

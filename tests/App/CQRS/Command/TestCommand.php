@@ -1,6 +1,6 @@
 <?php
 
-namespace Wynd\CQRSBundle\Tests\App\CQRS\Command;
+namespace Nihilus\CQRSBundle\Tests\App\CQRS\Command;
 
 use Nihilus\CommandInterface;
 

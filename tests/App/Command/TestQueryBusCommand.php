@@ -1,8 +1,8 @@
 <?php
 
-namespace Wynd\CQRSBundle\Tests\App\Command;
+namespace Nihilus\CQRSBundle\Tests\App\Command;
 
-use Wynd\CQRSBundle\Tests\App\CQRS\Query\TestQuery;
+use Nihilus\CQRSBundle\Tests\App\CQRS\Query\TestQuery;
 use Nihilus\QueryBusInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;

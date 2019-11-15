@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Wynd\CQRSBundle\Builder;
+namespace Nihilus\CQRSBundle\Builder;
 
 class MiddlewareChainBuilder
 {

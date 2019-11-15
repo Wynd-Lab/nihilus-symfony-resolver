@@ -1,6 +1,6 @@
 <?php
 
-namespace Wynd\CQRSBundle\Tests\App\CQRS\Query\Middleware;
+namespace Nihilus\CQRSBundle\Tests\App\CQRS\Query\Middleware;
 
 use Nihilus\QueryInterface;
 use Nihilus\QueryHandlerInterface;

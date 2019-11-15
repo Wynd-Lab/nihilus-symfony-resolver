@@ -1,13 +1,13 @@
 <?php
 
-namespace Wynd\CQRSBundle\Tests\DependencyInjection\CompilerPass;
+namespace Nihilus\CQRSBundle\Tests\DependencyInjection\CompilerPass;
 
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
-use Wynd\CQRSBundle\Builder\MiddlewareChainBuilder;
-use Wynd\CQRSBundle\DependencyInjection\CompilerPass\AutoRegisterChainMiddlewareCompilerPass;
+use Nihilus\CQRSBundle\Builder\MiddlewareChainBuilder;
+use Nihilus\CQRSBundle\DependencyInjection\CompilerPass\AutoRegisterChainMiddlewareCompilerPass;
 
 class AutoRegisterChainMiddlewareCompilerPassTest extends TestCase
 {
@@ -39,12 +39,12 @@ class AutoRegisterChainMiddlewareCompilerPassTest extends TestCase
         $containerBuilder
             ->expects($this->at(1))
             ->method('getParameter')
-            ->with('wynd.cqrs.type_middlewares_config')
+            ->with('Nihilus\CQRSBundle\.cqrs.type_middlewares_config')
             ->willReturn(['one_middleware' => ['a', 'b', 'c']]);
         $containerBuilder
             ->expects($this->at(2))
             ->method('getParameter')
-            ->with('wynd.cqrs.type_middlewares_binding')
+            ->with('Nihilus\CQRSBundle\.cqrs.type_middlewares_binding')
             ->willReturn(['OneQuery' => ['a', 'b']]);
         $containerBuilder
             ->expects($this->once())
@@ -67,7 +67,7 @@ class AutoRegisterChainMiddlewareCompilerPassTest extends TestCase
         $containerBuilder
             ->expects($this->once())
             ->method('setParameter')
-            ->with('wynd.cqrs.models.type', [
+            ->with('Nihilus\CQRSBundle\.cqrs.models.type', [
                 'OneQuery',
                 'TwoQuery'
             ]);

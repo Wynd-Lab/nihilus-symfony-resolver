@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Wynd\CQRSBundle\Tests\App;
+namespace Nihilus\CQRSBundle\Tests\App;
 
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
-use Wynd\CQRSBundle\WyndCQRSBundle;
+use Nihilus\CQRSBundle\NihilusCQRSBundle;
 
 class MicroKernel extends Kernel
 {
@@ -14,7 +14,7 @@ class MicroKernel extends Kernel
     {
         return [
             new FrameworkBundle(),
-            new WyndCQRSBundle(),
+            new NihilusCQRSBundle(),
         ];
     }
 
