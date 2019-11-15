@@ -1,6 +1,6 @@
 {
-  "name": "nihilus/cqrs-bundle",
-  "license": "apache",
+  "name": "wynd/nihilus-symfony-resolver",
+  "license": "MIT",
   "description": "CQRS Bundle",
   "type": "symfony-bundle",
   "autoload": {
