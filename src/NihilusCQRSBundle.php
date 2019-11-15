@@ -25,33 +25,33 @@ class NihilusCQRSBundle extends Bundle
     {
         $container->addCompilerPass(new AutoRegisterMessageHandlerCompilerPass(
             ContainerQueryHandlerResolver::class,
-            'Nihilus\CQRSBundle\.cqrs.query_handler'
+            'nihilus.cqrs.query_handler'
         ));
         $container->addCompilerPass(new AutoRegisterMessageHandlerCompilerPass(
             ContainerCommandHandlerResolver::class,
-            'Nihilus\CQRSBundle\.cqrs.command_handler'
+            'nihilus.cqrs.command_handler'
         ));
 
         $container->addCompilerPass(new AutoRegisterChainMiddlewareCompilerPass(
             QueryMiddlewareResolverInterface::class,
-            'Nihilus\CQRSBundle\.cqrs.query_handler',
+            'nihilus.cqrs.query_handler',
             'query',
             new MiddlewareChainBuilder()
         ));
         $container->addCompilerPass(new AutoRegisterChainMiddlewareCompilerPass(
             CommandMiddlewareResolverInterface::class,
-            'Nihilus\CQRSBundle\.cqrs.command_handler',
+            'nihilus.cqrs.command_handler',
             'command',
             new MiddlewareChainBuilder()
         ));
 
         $container->addCompilerPass(new AutoRegisterMiddlewareCompilerPass(
             QueryMiddlewareResolverInterface::class,
-            'Nihilus\CQRSBundle\.cqrs.query_middleware'
+            'nihilus.cqrs.query_middleware'
         ));
         $container->addCompilerPass(new AutoRegisterMiddlewareCompilerPass(
             CommandMiddlewareResolverInterface::class,
-            'Nihilus\CQRSBundle\.cqrs.command_middleware'
+            'nihilus.cqrs.command_middleware'
         ));
 
         parent::build($container);

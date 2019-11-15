@@ -20,5 +20,5 @@ services:
 
     Nihilus\CQRSBundle\Console\DebugCommand:
         arguments:
-            $queryNames: '%Nihilus\CQRSBundle\.cqrs.models.query%'
-            $commandNames: '%Nihilus\CQRSBundle\.cqrs.models.command%'
+            $queryNames: '%nihilus.cqrs.models.query%'
+            $commandNames: '%nihilus.cqrs.models.command%'

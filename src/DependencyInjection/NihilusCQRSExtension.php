@@ -24,9 +24,9 @@ class NihilusCQRSExtension extends ConfigurableExtension
 
         $loader->load('services.yml');
 
-        $container->setParameter('Nihilus\CQRSBundle\.cqrs.query_middlewares_config', $config['query']['middlewares']);
-        $container->setParameter('Nihilus\CQRSBundle\.cqrs.command_middlewares_config', $config['command']['middlewares']);
-        $container->setParameter('Nihilus\CQRSBundle\.cqrs.query_middlewares_binding', $config['query']['binding']);
-        $container->setParameter('Nihilus\CQRSBundle\.cqrs.command_middlewares_binding', $config['command']['binding']);
+        $container->setParameter('nihilus.cqrs.query_middlewares_config', $config['query']['middlewares']);
+        $container->setParameter('nihilus.cqrs.command_middlewares_config', $config['command']['middlewares']);
+        $container->setParameter('nihilus.cqrs.query_middlewares_binding', $config['query']['binding']);
+        $container->setParameter('nihilus.cqrs.command_middlewares_binding', $config['command']['binding']);
     }
 }

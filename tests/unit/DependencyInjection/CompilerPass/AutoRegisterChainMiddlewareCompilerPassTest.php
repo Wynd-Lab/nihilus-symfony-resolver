@@ -39,12 +39,12 @@ class AutoRegisterChainMiddlewareCompilerPassTest extends TestCase
         $containerBuilder
             ->expects($this->at(1))
             ->method('getParameter')
-            ->with('Nihilus\CQRSBundle\.cqrs.type_middlewares_config')
+            ->with('nihilus.cqrs.type_middlewares_config')
             ->willReturn(['one_middleware' => ['a', 'b', 'c']]);
         $containerBuilder
             ->expects($this->at(2))
             ->method('getParameter')
-            ->with('Nihilus\CQRSBundle\.cqrs.type_middlewares_binding')
+            ->with('nihilus.cqrs.type_middlewares_binding')
             ->willReturn(['OneQuery' => ['a', 'b']]);
         $containerBuilder
             ->expects($this->once())
@@ -67,7 +67,7 @@ class AutoRegisterChainMiddlewareCompilerPassTest extends TestCase
         $containerBuilder
             ->expects($this->once())
             ->method('setParameter')
-            ->with('Nihilus\CQRSBundle\.cqrs.models.type', [
+            ->with('nihilus.cqrs.models.type', [
                 'OneQuery',
                 'TwoQuery'
             ]);
