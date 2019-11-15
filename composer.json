@@ -1,7 +1,7 @@
 {
   "name": "wynd/nihilus-symfony-resolver",
   "license": "MIT",
-  "description": "CQRS Bundle",
+  "description": "Nihilus resolver provider as a Symfony Bundle",
   "type": "symfony-bundle",
   "autoload": {
     "psr-4": {
