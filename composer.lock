@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ef693cd53e7c0daffabf6ab2472c3b1",
+    "content-hash": "1dbc77da6f591ade725f6e252d45be15",
     "packages": [
         {
             "name": "psr/cache",
@@ -1676,16 +1676,16 @@
         },
         {
             "name": "wynd/nihilus",
-            "version": "1.0.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Wynd-Lab/nihilus.git",
-                "reference": "ec83a796928cb70cceacc75efd0438372de7eaed"
+                "reference": "5dc7d6c10740da61d6b491fdd00b5da68abfd7d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Wynd-Lab/nihilus/zipball/ec83a796928cb70cceacc75efd0438372de7eaed",
-                "reference": "ec83a796928cb70cceacc75efd0438372de7eaed",
+                "url": "https://api.github.com/repos/Wynd-Lab/nihilus/zipball/5dc7d6c10740da61d6b491fdd00b5da68abfd7d7",
+                "reference": "5dc7d6c10740da61d6b491fdd00b5da68abfd7d7",
                 "shasum": ""
             },
             "require-dev": {
@@ -1708,13 +1708,29 @@
             ],
             "authors": [
                 {
+                    "name": "Wynd",
+                    "email": "support@wynd.eu"
+                },
+                {
                     "name": "Sylvain Pontoreau",
-                    "email": "spontoreau@wynd.eu"
+                    "email": "pontoreau.sylvain@gmail.com"
+                },
+                {
+                    "name": "Jean Pasqualini",
+                    "email": "jpasqualini@wynd.eu"
+                },
+                {
+                    "name": "Thomas goalec",
+                    "email": "tgoalec@wynd.eu"
+                },
+                {
+                    "name": "Camille Dejoye",
+                    "email": "camille.dejoye@wynd.eu"
                 }
             ],
             "description": "CQRS component with 0 dependencies. Built by Wynd with PHP and ️❤️!",
             "homepage": "https://github.com/Wynd-Lab/nihilus",
-            "time": "2019-11-12T14:46:06+00:00"
+            "time": "2019-11-29T09:07:29+00:00"
         }
     ],
     "packages-dev": [

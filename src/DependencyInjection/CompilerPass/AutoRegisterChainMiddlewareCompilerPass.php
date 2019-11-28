@@ -73,9 +73,12 @@ class AutoRegisterChainMiddlewareCompilerPass implements CompilerPassInterface
         $messagesHandler = $container->findTaggedServiceIds($this->handlerTagName);
 
         $models = [];
-        foreach ($messagesHandler as $tags) {
+        foreach ($messagesHandler as $serviceId => $tags) {
+            $handlerClass = $container->getDefinition($serviceId)->getClass();
+            $messageClass = $handlerClass::getHandledClass();
+
             foreach ($tags as $tag) {
-                $models[] = $tag['handle'];
+                $models[] = $tag['handle'] ?? $messageClass;
             }
         }
 

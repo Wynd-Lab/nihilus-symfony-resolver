@@ -2,6 +2,7 @@
 
 namespace Nihilus\CQRSBundle\Tests\DependencyInjection\CompilerPass;
 
+use Nihilus\CQRSBundle\Tests\unit\Fake\HelloCommandHandlerFake;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -35,6 +36,7 @@ class AutoRegisterChainMiddlewareCompilerPassTest extends TestCase
         $containerBuilder = $this->createMock(ContainerBuilder::class);
 
         $resolverDefinition = new Definition();
+        $handlerDefinition = new Definition(HelloCommandHandlerFake::class);
 
         $containerBuilder
             ->expects($this->at(1))
@@ -63,6 +65,10 @@ class AutoRegisterChainMiddlewareCompilerPassTest extends TestCase
             ->method('findDefinition')
             ->with('resolver_id')
             ->willReturn($resolverDefinition);
+
+        $containerBuilder
+            ->method('getDefinition')
+            ->willReturn($handlerDefinition);
 
         $containerBuilder
             ->expects($this->once())
