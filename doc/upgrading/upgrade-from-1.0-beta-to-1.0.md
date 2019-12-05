@@ -13,5 +13,5 @@ in each class handler, add method `getHandledClass(): string` and return the FQC
 
 #### 3) Change interface use for each handler
 
-For each command handler replace implement of `Nihilus\CQRSBundle\Command\CommandHandlerInterface` by `Nihilus\CommandHandlerInterface`
-For each query handler replace implement of `Nihilus\CQRSBundle\Query\QueryHandlerInterface` by `Nihilus\QueryHandlerInterface`
+For each command handler replace implement of `Nihilus\CommandHandlerInterface` by `Nihilus\CQRSBundle\Command\CommandHandlerInterface`
+For each query handler replace implement of `Nihilus\QueryHandlerInterface` by `Nihilus\CQRSBundle\Query\QueryHandlerInterface`
