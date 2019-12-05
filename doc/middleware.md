@@ -33,7 +33,7 @@ services:
 ```yaml
 nihilus_cqrs:
     query|command:
-        middleware:
+        middleware_chains:
             main_chain: ['transaction']
             chain_name: ['@main_chain', 'another_middleware']
 ```
@@ -47,7 +47,7 @@ By default, all query/command use `global` chain name
 ```yaml
 nihilus_cqrs:
     query|command:
-        middleware:
+        middleware_chains:
             main_chain: ['transaction']
             chain_name: ['@main_chain', 'another_middleware']
         binding:

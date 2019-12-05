@@ -58,13 +58,13 @@ return [
 ```yaml
 nihilus_cqrs:
   query:
-    middlewares:
+    middleware_chains:
       global: ['test1']
       transaction: ['@global', 'test2']
     binding:
       Nihilus\CQRSBundle\Tests\App\CQRS\Query\Handler\TestQuery: ['@transaction', 'test3']
   command:
-    middlewares: ~
+    middleware_chains: ~
     binding: ~
 ```
 
@@ -73,3 +73,6 @@ nihilus_cqrs:
 - [Middleware](middleware.md)
 - [Bus](bus.md)
 - [Debug](debug.md)
+
+#### Upgrading
+- [From 1.0-beta to 1.0](upgrading/upgrade-from-1.0-beta-to-1.0.md)
