@@ -2,6 +2,10 @@
 
 namespace Nihilus\CQRSBundle\DependencyInjection;
 
+use Nihilus\CommandMiddlewareInterface;
+use Nihilus\CQRSBundle\Command\CommandHandlerInterface;
+use Nihilus\CQRSBundle\Query\QueryHandlerInterface;
+use Nihilus\QueryMiddlewareInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
@@ -24,8 +28,14 @@ class NihilusCQRSExtension extends ConfigurableExtension
 
         $loader->load('services.yml');
 
-        $container->setParameter('nihilus.cqrs.query_middlewares_config', $config['query']['middlewares']);
-        $container->setParameter('nihilus.cqrs.command_middlewares_config', $config['command']['middlewares']);
+
+        $container->registerForAutoconfiguration(QueryHandlerInterface::class)
+            ->addTag('nihilus.cqrs.query_handler');
+        $container->registerForAutoconfiguration(CommandHandlerInterface::class)
+            ->addTag('nihilus.cqrs.command_handler');
+
+        $container->setParameter('nihilus.cqrs.query_middlewares_config', $config['query']['middleware_chains']);
+        $container->setParameter('nihilus.cqrs.command_middlewares_config', $config['command']['middleware_chains']);
         $container->setParameter('nihilus.cqrs.query_middlewares_binding', $config['query']['binding']);
         $container->setParameter('nihilus.cqrs.command_middlewares_binding', $config['command']['binding']);
     }

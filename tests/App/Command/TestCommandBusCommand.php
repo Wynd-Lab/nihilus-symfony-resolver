@@ -13,13 +13,13 @@ class TestCommandBusCommand extends Command
     protected static $defaultName = 'app:command';
 
     /**
-     * @var CommandBusInteface
+     * @var CommandBusInterface
      */
     private $commandBus;
 
     /**
      * TestQueryBusCommand constructor.
-     * @param CommandBusInteface $commandBus
+     * @param CommandBusInterface $commandBus
      */
     public function __construct(CommandBusInterface $commandBus)
     {

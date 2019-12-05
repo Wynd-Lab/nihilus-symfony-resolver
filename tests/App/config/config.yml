@@ -6,11 +6,16 @@ framework:
 
 nihilus_cqrs:
   query:
-    middlewares:
+    middleware_chains:
       global: ['test1']
       transaction: ['@global', 'test2']
     binding:
       Nihilus\CQRSBundle\Tests\App\CQRS\Query\TestQuery: ['@transaction', 'test3']
   command:
-    middlewares: ~
+    middleware_chains: ~
     binding: ~
+
+services:
+  _instanceof:
+    Nihilus\CQRSBundle\Query\QueryHandlerInterface:
+      tags: ['nihilus.cqrs.query_middleware']

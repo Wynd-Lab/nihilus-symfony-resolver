@@ -12,6 +12,8 @@ use Nihilus\CQRSBundle\DependencyInjection\CompilerPass\AutoRegisterMiddlewareCo
 use Nihilus\QueryMiddlewareResolverInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Nihilus\CQRSBundle\Query\QueryHandlerInterface;
+use Nihilus\CQRSBundle\Command\CommandHandlerInterface;
 
 /**
  * Class NihilusCQRSBundle
@@ -25,11 +27,13 @@ class NihilusCQRSBundle extends Bundle
     {
         $container->addCompilerPass(new AutoRegisterMessageHandlerCompilerPass(
             ContainerQueryHandlerResolver::class,
-            'nihilus.cqrs.query_handler'
+            'nihilus.cqrs.query_handler',
+            QueryHandlerInterface::class
         ));
         $container->addCompilerPass(new AutoRegisterMessageHandlerCompilerPass(
             ContainerCommandHandlerResolver::class,
-            'nihilus.cqrs.command_handler'
+            'nihilus.cqrs.command_handler',
+            CommandHandlerInterface::class
         ));
 
         $container->addCompilerPass(new AutoRegisterChainMiddlewareCompilerPass(

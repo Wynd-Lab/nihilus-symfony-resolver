@@ -13,6 +13,9 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  */
 class Configuration implements ConfigurationInterface
 {
+    const CHAINS_OF_MIDDLEWARE = 'middleware_chains';
+    const BINDING_OF_HANDLERS = 'binding';
+
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
@@ -23,12 +26,14 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->arrayNode('query')
                     ->children()
-                        ->arrayNode('middlewares')
+                        ->arrayNode(self::CHAINS_OF_MIDDLEWARE)
+                            ->info('A list of named chains of middlewares. You can have none, one or many middlewares in each chain.')
                             ->arrayPrototype()
                                 ->scalarPrototype()->end()
                             ->end()
                         ->end()
-                        ->arrayNode('binding')
+                        ->arrayNode(self::BINDING_OF_HANDLERS)
+                            ->info('anonymous chain bind to handle, global chain used by default is ommit')
                             ->arrayPrototype()
                                 ->scalarPrototype()->end()
                             ->end()
@@ -37,12 +42,14 @@ class Configuration implements ConfigurationInterface
                 ->end()
                 ->arrayNode('command')
                     ->children()
-                        ->arrayNode('middlewares')
+                        ->arrayNode(self::CHAINS_OF_MIDDLEWARE)
+                            ->info('A list of named chains of middlewares. You can have none, one or many middlewares in each chain.')
                             ->arrayPrototype()
                                 ->scalarPrototype()->end()
                             ->end()
                         ->end()
-                        ->arrayNode('binding')
+                        ->arrayNode(self::BINDING_OF_HANDLERS)
+                            ->info('anonymous chain bind to handle, global chain used by default is ommit')
                             ->arrayPrototype()
                                 ->scalarPrototype()->end()
                             ->end()

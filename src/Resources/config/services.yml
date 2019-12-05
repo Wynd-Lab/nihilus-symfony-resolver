@@ -11,8 +11,10 @@ services:
     Nihilus\QueryMiddlewareResolverInterface: '@Nihilus\CQRSBundle\Query\Resolver\ContainerQueryMiddlewareResolver'
     Nihilus\CommandMiddlewareResolverInterface: '@Nihilus\CQRSBundle\Command\Resolver\ContainerCommandMiddlewareResolver'
 
-    Nihilus\QueryBus: ~
-    Nihilus\CommandBus: ~
+    Nihilus\QueryBus:
+        public: true
+    Nihilus\CommandBus:
+        public: true
     Nihilus\CQRSBundle\Query\Resolver\ContainerQueryHandlerResolver: ~
     Nihilus\CQRSBundle\Command\Resolver\ContainerCommandHandlerResolver: ~
     Nihilus\CQRSBundle\Query\Resolver\ContainerQueryMiddlewareResolver: ~
