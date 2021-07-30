@@ -27,7 +27,8 @@
     "symfony/var-dumper": "3.4.*",
     "phpmd/phpmd": "^2.7",
     "friendsofphp/php-cs-fixer": "^2.15",
-    "spatie/phpunit-watcher": "^1.10"
+    "spatie/phpunit-watcher": "^1.10",
+    "rector/rector": "^0.11.40"
   },
   "scripts": {
       "test": "vendor/bin/phpunit tests --bootstrap vendor/autoload.php",
