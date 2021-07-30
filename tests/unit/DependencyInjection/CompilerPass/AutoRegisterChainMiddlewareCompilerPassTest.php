@@ -39,15 +39,11 @@ class AutoRegisterChainMiddlewareCompilerPassTest extends TestCase
         $handlerDefinition = new Definition(HelloCommandHandlerFake::class);
 
         $containerBuilder
-            ->expects($this->at(1))
             ->method('getParameter')
-            ->with('nihilus.cqrs.type_middlewares_config')
-            ->willReturn(['one_middleware' => ['a', 'b', 'c']]);
-        $containerBuilder
-            ->expects($this->at(2))
-            ->method('getParameter')
-            ->with('nihilus.cqrs.type_middlewares_binding')
-            ->willReturn(['OneQuery' => ['a', 'b']]);
+            ->willReturnMap([
+                ['nihilus.cqrs.type_middlewares_config', ['one_middleware' => ['a', 'b', 'c']]],
+                ['nihilus.cqrs.type_middlewares_binding', ['OneQuery' => ['a', 'b']]],
+            ]);
         $containerBuilder
             ->expects($this->once())
             ->method('findTaggedServiceIds')
