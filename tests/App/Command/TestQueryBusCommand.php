@@ -32,8 +32,9 @@ class TestQueryBusCommand extends Command
         $this->setDescription('Test the query bus command');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         dump($this->queryBus->execute(new TestQuery()));
+        return 0;
     }
 }

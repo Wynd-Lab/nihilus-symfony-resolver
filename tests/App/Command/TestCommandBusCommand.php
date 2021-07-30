@@ -32,8 +32,9 @@ class TestCommandBusCommand extends Command
         $this->setDescription('Test the command bus command');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         dump($this->commandBus->execute(new TestCommand()));
+        return 0;
     }
 }
