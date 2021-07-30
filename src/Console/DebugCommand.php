@@ -68,12 +68,13 @@ class DebugCommand extends Command
         $this->setName('debug:cqrs:handler');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output): void
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $outputSymfony = new SymfonyStyle($input, $output);
 
         $this->showQuery($outputSymfony);
         $this->showCommand($outputSymfony);
+        return 0;
     }
 
     private function showQuery(SymfonyStyle $output): void
