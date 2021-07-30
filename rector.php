@@ -26,6 +26,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(SymfonySetList::SYMFONY_42);
     $containerConfigurator->import(SymfonySetList::SYMFONY_43);
     $containerConfigurator->import(SymfonySetList::SYMFONY_44);
+    $containerConfigurator->import(PHPUnitSetList::PHPUNIT_90);
+    $containerConfigurator->import(PHPUnitSetList::PHPUNIT_91);
 
     // get services (needed for register a single rule)
     $services = $containerConfigurator->services();
