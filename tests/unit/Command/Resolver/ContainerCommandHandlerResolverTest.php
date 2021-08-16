@@ -5,6 +5,7 @@ namespace Nihilus\CQRSBundle\tests\Command\Resolver;
 use Nihilus\CommandHandlerInterface;
 use Nihilus\CommandHandlerResolverInterface;
 use Nihilus\CommandInterface;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 use Nihilus\CQRSBundle\Command\Resolver\ContainerCommandHandlerResolver;
@@ -12,12 +13,12 @@ use Nihilus\CQRSBundle\Command\Resolver\ContainerCommandHandlerResolver;
 class ContainerCommandHandlerResolverTest extends TestCase
 {
     /**
-     * @var CommandHandlerResolverInterface
+     * @var ContainerCommandHandlerResolver
      */
     private $resolver;
 
     /**
-     * @var ContainerInterface
+     * @var MockObject|ContainerInterface
      */
     private $container;
 
