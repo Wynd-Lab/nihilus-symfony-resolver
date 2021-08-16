@@ -26,6 +26,12 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(SymfonySetList::SYMFONY_42);
     $containerConfigurator->import(SymfonySetList::SYMFONY_43);
     $containerConfigurator->import(SymfonySetList::SYMFONY_44);
+    $containerConfigurator->import(SymfonySetList::SYMFONY_50);
+    $containerConfigurator->import(SymfonySetList::SYMFONY_50_TYPES);
+    $containerConfigurator->import(__DIR__.'/vendor/rector/rector/vendor/rector/rector-symfony/config/sets/symfony/symfony51.php');
+    $containerConfigurator->import(SymfonySetList::SYMFONY_52);
+    $containerConfigurator->import(SymfonySetList::SYMFONY_52_VALIDATOR_ATTRIBUTES);
+
     $containerConfigurator->import(PHPUnitSetList::PHPUNIT_90);
     $containerConfigurator->import(PHPUnitSetList::PHPUNIT_91);
 
