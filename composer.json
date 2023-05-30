@@ -16,9 +16,9 @@
   },
   "require": {
     "php": ">=7.2",
-    "symfony/http-kernel": "^4.0 | ^5.0",
-    "symfony/framework-bundle": "^4.0 | ^5.0",
-    "symfony/yaml": "^4.0 | ^5.0",
+    "symfony/http-kernel": "^4.0 | ^5.0 | ^6.0",
+    "symfony/framework-bundle": "^4.0 | ^5.0 | ^6.0",
+    "symfony/yaml": "^4.0 | ^5.0 | ^6.0",
     "wynd/nihilus": "1.1.*"
   },
   "require-dev": {
@@ -28,7 +28,7 @@
     "phpmd/phpmd": "^2.7",
     "friendsofphp/php-cs-fixer": "^2.15",
     "spatie/phpunit-watcher": "^1.10",
-    "rector/rector": "^0.11.40"
+    "rector/rector": "^0.16"
   },
   "scripts": {
       "test": "vendor/bin/phpunit tests --bootstrap vendor/autoload.php",
